@@ -1,0 +1,25 @@
+Use frtotenv_env.txt file to create a conda environment to run the codes
+Create a folder data to store the data from synthetic experiments
+Create the path newdirfont1216extrem/data to store the data from real experiments
+rho from experiments is used as gamma in codes
+
+Synthetic:
+run from "FRTOT_gamma=4_f_n=24_lenscale=0.2_RBF_2D_statextrem.py" with changing gamma(Line 178) to reproduce Figure 2a)-2e)
+run from "FRTOT_gamma_lessrange_optimized_normalized_dfds_min14_frep=2_f_n=10_lenscale=0.2_knowncomp_RBF_2D.py" to reproduce Figure 2f)
+Use "syntheticplotfromdata.py" to reproduce Figure 2a)-2e) by changing gamma/servpltle/wplt in Lines 16/11/12
+Use "pltfrdatagammarange.py" to reproduce Figure 2f)  
+
+Real:
+Run from "FRTOT_real_t=960_06-85_1310_2226_oldhyp_fontadjusted_extrem_zerovr2_woday.py" to reproduce Figures 3a)-3e)
+Run from "FRTOT_real_t=960_12-94_1216_3186_oldhyp_fontadjusted_extrem_zerovr2_woday.py" to reproduce Figure 3f) and Figure-10
+Run from "FRTOT_real_t=960_12-94_1826_2226_oldhyp_fontadjusted_extrem_zerovr2_woday.py" to reproduce Figure-11
+Run from "FRTOT_real_t=960_12-94_1310_3186_oldhyp_fontadjusted_extrem_zerovr2_woday.py" tp reproduce Figure-12
+change st_ti_val (Line 228)to run experiment at a different initial time
+For changing hyperparameters go to Line 220(outputscale) or Line 130 of Bayopthelper_real_2_wind_oldhyp_zerovr2_woday.py for all
+Use "teaserbarplot.py" to reproduce Figure-1 and a similar teaser plot corresponding to Figure 3f) 
+Use "powerplotbarrho.py" to reproduce Figure 3a),3f),11a) and 12a)
+Use "plotfromdata_totpow.py" and change servpltle/wplt/gamma in Lines 11/12/20 appropriately as mentioned to reproduce all other energy/cost plots
+
+"FRThelper.py" contains all functions to construct HST metric and run mirror descent procedure(Line 176)
+
+Data was extracted from archived version of "https://github.com/awegroup/awe-era5" mentioned in the website
